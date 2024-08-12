@@ -1,0 +1,70 @@
+To train for coco
+python train.py --dataset coco --coco_path coco/ --depth 50 --epochs 3
+
+To Train for CSV (our own dataset)
+python train.py --dataset csv --csv_train dataset/csv/train_annots.csv  --csv_classes dataset/csv/class_list.csv --csv_val dataset/csv/val_annots.csv --depth 50 --epochs 300
+
+python train.py --dataset csv --csv_train dataset/csv/train_annots.csv  --csv_classes dataset/csv/class_list.csv  --depth 50 --epochs 300
+
+
+
+Validation:For CSV Datasets (more info on those below), run the following script to validate:
+** python csv_validation.py --csv_annotations_path dataset/csv/val_annots.csv  --model_path model_final.pt  --class_list_path dataset/csv/class_list.csv 
+
+python csv_validation.py --csv_annotations_path dataset/csv/val_annots.csv  --model_path csv_retinanet_2.pt  --images_path dataset/images/validation  --class_list_path dataset/csv/class_list.csv
+
+python csv_validation.py --csv_annotations_path dataset/csv/val_annots.csv  --model_path path/to/model.pt  --images_path path/to/images_dir  --class_list_path dataset/csv/class_list.csv   (optional) iou_threshold iou_thres (0<iou_thresh<1) 
+
+python csv_validation.py --csv_annotations_path dataset/images/validation/set1/val_annots.csv  --model_path path/to/model.pt  --images_path dataset/images/validation/set1  --class_list_path dataset/csv/class_list.csv   (optional) iou_threshold iou_thres (0<iou_thresh<1) 
+
+------------------------------------------------
+Visualization
+This will visualize bounding boxes on the validation set. To visualise with a CSV dataset, use:
+
+python visualize_single_image.py --image_dir images/myimages --class_list dataset/csv/class_list.csv --model_path model_final.pt
+
+
+
+
+
+Convert online CSV comma seperated into CSV proper format
+https://www.convertcsv.com/csv-to-csv.htm?utm_content=cmp-true
+
+Problem with Parallel GPU Model training and saving
+https://discuss.pytorch.org/t/loading-a-model-state-dict-after-training-the-model-using-nn-dataparallel/118626
+
+----------------------------------------------
+To visualize single image detection
+	python visualize_single_image.py --image_dir images/myimages  --model_path model_final.pt  --class_list dataset/csv/class_list.csv 
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Evaluating dataset
+1397/1397
+Label_name              TP              FP              Precision               Recall          F1              mAP
+
+angiodysplasia           66.0           151.0           0.304                   0.688           0.422           0.546
+
+erosion          482.0          720.0           0.401                   0.726           0.517           0.605
+
+stenosis                 53.0           117.0           0.312                   0.946           0.469           0.881
+
+lymphangiectasia                 49.0           69.0            0.415                   0.742           0.533           0.657
+
+lymph-follicle           554.0          941.0           0.371                   0.702           0.485           0.529
+
+SMT              53.0           223.0           0.192                   0.855           0.314           0.697
+
+polyp-like               261.0          322.0           0.448                   0.689           0.543           0.584
+
+bleeding                 103.0          255.0           0.288                   0.798           0.423           0.694
+
+diverticulum             2.0            11.0            0.154                   0.222           0.182           0.156
+
+erythema                 100.0          416.0           0.194                   0.794           0.312           0.491
+
+foreign-body             144.0          272.0           0.346                   0.809           0.485           0.618
+
+vein             72.0           102.0           0.414                   0.878           0.562           0.83
+
+
