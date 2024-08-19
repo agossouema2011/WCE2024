@@ -1,0 +1,9 @@
+train: ../data/images/training/
+val: ../data/images/validation/
+
+# number of classes
+nc: 12
+
+# class names
+# classes: 0 index is reserved for background
+names: ['angiodysplasia','erosion','stenosis','lymphangiectasia','lymph-follicle','SMT','polyp-like','bleeding','diverticulum','erythema','foreign-body','vein']
