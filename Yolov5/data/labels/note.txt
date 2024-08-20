@@ -1,1 +1,1 @@
-Put the training and validation annotation txt files here
+Put the training and validation annotation .txt files here in the corresponding folders
