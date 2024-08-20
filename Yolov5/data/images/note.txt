@@ -1,1 +1,1 @@
-Put the images for training here
+Put the images for training and validation in the corresponding folder here
