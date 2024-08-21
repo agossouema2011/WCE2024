@@ -1,5 +1,5 @@
 # Influence of color correction on pathology detection in Capsule Endoscopy
-This is an official implementation for WCE Workshop in ICPR paper ["nfluence of color correction on pathology detection in Capsule Endoscopy"](https://xx.pdf). 
+This is an official implementation for WCE Workshop in ICPR paper ["Influence of color correction on pathology detection in Capsule Endoscopy"](https://xx.pdf). 
 It includes the code for Object Detection tasks using Retinanet and YOLOv5 on the SEE-AI Capsule Endoscopy dataset.
 (1) Retinant and YOLOv5 benchmarked on the original SEE-AI Dataset (R_OrigD)
 (2) Retinant and YOLOv5 benchmarked on the Color Checker Corrected version of SEE-AI Dataset (R_CCD)
@@ -142,7 +142,8 @@ This work is released under the [xxxx](LICENSE).
 ## Acknowledgement
 -   [Retinanet](https://github.com/yhenon/pytorch-retinanet)
 -   [YOLOv5](https://github.com/ultralytics/yolov5/tree/master)
--   ```
+- Enhancement of Colour Reproduction for Capsule Endoscopy Images
+```
 @inproceedings{watine2023enhancement,
   title={Enhancement of Colour Reproduction for Capsule Endoscopy Images},
   author={Watine, L{\'e}o and Floor, P{\aa}l Anders and Pedersen, Marius and Nussbaum, Peter and Ahmad, Bilal and Hovde, {\O}istein},
