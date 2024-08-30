@@ -158,35 +158,8 @@ Table 4. Total number of False Positives. For the selected pathologies, both col
 
 
 ## Some Detection Results 
-<img src="">
+<img src="results/detections.png">
 
-
-<table border="0" width="800">
-<tr>
-	
-</tr>
-	
-<tr>
-	
-</tr>
-<tr>
-	<td width="15%" align="center"> 2% </td>
-	<td width="25%" align="center"> 24.99 </td>
-</tr>
-<tr>
-	<td width="15%" align="center"> 5% </td>
-	<td width="25%" align="center"> 30.07 </td>
-</tr>
-<tr>
-	<td width="15%" align="center"> 10% </td>
-	<td width="25%" align="center"> 32.58 </td>
-</tr>
-<tr>
-	<td width="15%" align="center"> 20% </td>
-	<td width="25%" align="center"> 35.49 </td>
-</tr>
-
-</table>
 	
 ## Citing the paper
 
