@@ -50,6 +50,7 @@ You will have to unzip and copy and paste the content in the corresponding folde
 ## Training Retinanet Model
 
 ```
+python train.py --dataset csv --csv_train dataset/csv/train_annots.csv  --csv_classes dataset/csv/class_list.csv --csv_val dataset/csv/val_annots.csv --depth 50 --epochs 800
 
 ```
 ## Validation for Retinanet Model
@@ -60,24 +61,31 @@ You will have to unzip and copy and paste the content in the corresponding folde
 ## Testing Retinanet Model
 
 ```
+python csv_validation.py --csv_annotations_path dataset/csv/val_annots.csv  --model_path outputs/csv_retinanet_182.pt   --class_list_path dataset/csv/class_list.csv
 
 ```
 
+## Testing Retinanet Model
 
+```
+python visualize_single_image_advanced.py --csv_annotations_path dataset/csv/val_annots.csv  --images_dir images/myimages --class_list dataset/csv/class_list.csv --model_path outputs/csv_retinanet_182.pt  --depth 50  
+```
 ## Training YOLOv5 Model
 
 ```
-
+python yolov5/train.py --img 576 --batch 32 --epochs 400 --data dataset.yaml --weights yolov5s.pt 
 ```
 ## Validation for YOLOv5 Model
 
 ```
+python yolov5/val.py --weights yolov5/runs/train/exp3/weights/best.pt --data dataset.yaml --img 576
 
 ```
 ## Testing YOLOv5 Model
 
 ```
 
+python yolov5/detect.py --weights yolov5/runs/train/exp3/weights/best.pt --conf_thres 0.24 --iou_thres 0.79 --source data/images/validation/  --annotations_path data/labels/validation
 ```
 ## Performance metrics
 ```
