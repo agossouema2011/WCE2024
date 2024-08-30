@@ -50,7 +50,7 @@ You will have to unzip and copy and paste the content in the corresponding folde
 ## Training Retinanet Model
 
 ```
-python train.py --dataset csv --csv_train dataset/csv/train_annots.csv  --csv_classes dataset/csv/class_list.csv --csv_val dataset/csv/val_annots.csv --depth 50 --epochs 800
+python train.py --dataset csv --csv_train dataset/csv/train_annots.csv  --csv_classes dataset/csv/class_list.csv --csv_val dataset/csv/val_annots.csv --depth 50 --epochs 400
 
 ```
 ## Validation for Retinanet Model
@@ -85,7 +85,7 @@ python yolov5/val.py --weights yolov5/runs/train/exp3/weights/best.pt --data dat
 
 ```
 
-python yolov5/detect.py --weights yolov5/runs/train/exp3/weights/best.pt --conf_thres 0.24 --iou_thres 0.79 --source data/images/validation/  --annotations_path data/labels/validation
+python yolov5/detect.py --weights yolov5/runs/train/exp3/weights/best.pt --conf_thres 0.24 --iou_thres 0.5 --source data/images/validation/  --annotations_path data/labels/validation
 ```
 ## Performance metrics
 ```
