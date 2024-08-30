@@ -56,11 +56,6 @@ python train.py --dataset csv --csv_train dataset/csv/train_annots.csv  --csv_cl
 ## Validation for Retinanet Model
 
 ```
-
-```
-## Testing Retinanet Model
-
-```
 python csv_validation.py --csv_annotations_path dataset/csv/val_annots.csv  --model_path outputs/csv_retinanet_182.pt   --class_list_path dataset/csv/class_list.csv
 
 ```
@@ -89,6 +84,24 @@ python yolov5/detect.py --weights yolov5/runs/train/exp3/weights/best.pt --conf_
 ```
 ## Performance metrics
 ```
+| Table 1. Models performances in F1-scores across the three different color schemes. Bold values indicate wherever color-correction results in better scores. |         |           |       |        |         |       |        |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|-----------|-------|--------|---------|-------|--------|
+|                                                                                                                                                              |         |           |       |        |         |       |        |
+|                                                                                                                                                              |         | Retinanet |       |        | YOLOv5  |       |        |
+| Pathologies                                                                                                                                                  | Weights | R-OrigD   | R-CCD | R-CCCD | R-OrigD | R-CCD | R-CCCD |
+| angiodysplasia                                                                                                                                               | 0.036   | 0.444     | 0.523 | 0.515  | 0.629   | 0.601 | 0.634  |
+| erosion                                                                                                                                                      | 0.252   | 0.623     | 0.567 | 0.581  | 0.676   | 0.667 | 0.677  |
+| stenosis                                                                                                                                                     | 0.021   | 0.564     | 0.549 | 0.515  | 0.691   | 0.747 | 0.657  |
+| lymphangiectasia                                                                                                                                             | 0.025   | 0.587     | 0.746 | 0.662  | 0.718   | 0.776 | 0.759  |
+| lymph-follicle                                                                                                                                               | 0.299   | 0.538     | 0.535 | 0.539  | 0.584   | 0.583 | 0.563  |
+| SMT                                                                                                                                                          | 0.024   | 0.522     | 0.582 | 0.449  | 0.736   | 0.705 | 0.733  |
+| polyp-like                                                                                                                                                   | 0.144   | 0.57      | 0.572 | 0.593  | 0.697   | 0.718 | 0.696  |
+| bleeding                                                                                                                                                     | 0.049   | 0.643     | 0.552 | 0.589  | 0.693   | 0.65  | 0.677  |
+| diverticulum                                                                                                                                                 | 0.003   | 0.133     | 0.211 | 0.273  | 0.301   | 0.159 | 0.175  |
+| erythema                                                                                                                                                     | 0.048   | 0.435     | 0.36  | 0.397  | 0.492   | 0.403 | 0.476  |
+| foreign-body                                                                                                                                                 | 0.068   | 0.593     | 0.545 | 0.537  | 0.697   | 0.643 | 0.68   |
+| vein                                                                                                                                                         | 0.031   | 0.739     | 0.747 | 0.773  | 0.816   | 0.797 | 0.761  |
+| F1-score                                                                                                                                                     |         | 0.571     | 0.553 | 0.559  | 0.649   | 0.638 | 0.638  |
 
 ```
 
