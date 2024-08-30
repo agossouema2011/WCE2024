@@ -104,6 +104,46 @@ python yolov5/detect.py --weights yolov5/runs/train/exp3/weights/best.pt --conf_
 | F1-score         |         | 0.571     | 0.553 | 0.559  | 0.649   | 0.638 | 0.638  |
 
 
+Table 2. Models performances in AP across the three different experiments schemes. Bold values indicate wherever color-correction results in better scores.
+
+|                  |         | RetinaNet |       |        | YOLOv5  |       |        |
+|------------------|---------|-----------|-------|--------|---------|-------|--------|
+| Pathologies      | Weights | R-OrigD   | R-CCD | R-CCCD | R-OrigD | R-CCD | R-CCCD |
+| angiodysplasia   | 0.036   | 0.468     | 0.486 | 0.485  | 0.627   | 0.595 | 0.608  |
+| erosion          | 0.252   | 0.572     | 0.58  | 0.577  | 0.695   | 0.684 | 0.706  |
+| stenosis         | 0.021   | 0.895     | 0.834 | 0.828  | 0.766   | 0.827 | 0.765  |
+| lymphangiectasia | 0.025   | 0.676     | 0.672 | 0.649  | 0.761   | 0.79  | 0.814  |
+| lymph-follicle   | 0.299   | 0.469     | 0.463 | 0.449  | 0.622   | 0.588 | 0.597  |
+| SMT              | 0.024   | 0.611     | 0.703 | 0.743  | 0.791   | 0.785 | 0.765  |
+| polyp-like       | 0.144   | 0.516     | 0.538 | 0.535  | 0.705   | 0.756 | 0.74   |
+| bleeding         | 0.049   | 0.643     | 0.643 | 0.679  | 0.706   | 0.709 | 0.714  |
+| diverticulum     | 0.003   | 0.222     | 0.133 | 0.278  | 0.19    | 0.213 | 0.173  |
+| erythema         | 0.048   | 0.496     | 0.543 | 0.504  | 0.536   | 0.464 | 0.497  |
+| foreign-body     | 0.068   | 0.496     | 0.525 | 0.541  | 0.727   | 0.706 | 0.739  |
+| vein             | 0.031   | 0.804     | 0.778 | 0.882  | 0.889   | 0.849 | 0.809  |
+| AP               |         | 0.54      | 0.548 | 0.548  | 0.677   | 0.666 | 0.674  |
+
+Table 3. Retinanet: IoU comparison across the three different color schemes. Green arrows indicate wherever there is an increase of the metric value whereas red arrows indicate wherever there is a decrease.
+|                                                |         |         |         |       |      |
+|------------------------------------------------|---------|---------|---------|-------|------|
+| Pathologies                                    | R-OrigD | R-CCD   | R-CCCD  | % I1  | % I2 |
+| angiodysplasia                                 | 0.284   | 0.362 ↑ | 0.342 ↑ | 7.8   | 5.8  |
+| erosion                                        | 0.524   | 0.434 ↓ | 0.448 ↓ | -9    | -7.6 |
+| stenosis                                       | 0.367   | 0.338 ↓ | 0.325 ↓ | -2.9  | -4.2 |
+| lymphangiectasia                               | 0.391   | 0.624 ↑ | 0.487 ↑ | 23.3  | 9.6  |
+| lymph-follicle                                 | 0.339   | 0.342 ↑ | 0.383 ↑ | 0.3   | 4.4  |
+| SMT                                            | 0.342   | 0.383 ↑ | 0.260 ↓ | 4.1   | -8.2 |
+| polyp-like                                     | 0.452   | 0.462 ↑ | 0.486 ↑ | 1     | 3.4  |
+| bleeding                                       | 0.536   | 0.429 ↓ | 0.442 ↓ | -10.7 | -9.4 |
+| diverticulum                                   | 0.116   | 0.165 ↑ | 0.200 ↑ | 4.9   | 8.4  |
+| erythema                                       | 0.288   | 0.218 ↓ | 0.246 ↓ | -7    | -4.2 |
+| foreign-body                                   | 0.468   | 0.365 ↓ | 0.396 ↓ | -10.3 | -7.2 |
+| vein                                           | 0.585   | 0.607 ↑ | 0.580 ↓ | 2.2   | -0.5 |
+| %I1 is the increase with R-CCD against R-OrigD |         |         |         |       |      |
+| %I2 is the increase of R-CCCD against R-OrigD  |         |         |         |       |      |
+|                                                |         |         |         |       |      |
+
+
 ## False Positive Results 
 ```
 
