@@ -83,7 +83,7 @@ python yolov5/val.py --weights yolov5/runs/train/exp3/weights/best.pt --data dat
 python yolov5/detect.py --weights yolov5/runs/train/exp3/weights/best.pt --conf_thres 0.24 --iou_thres 0.5 --source data/images/validation/  --annotations_path data/labels/validation
 ```
 ## Performance metrics
-```
+
 | Table 1. Models performances in F1-scores across the three different color schemes. Bold values indicate wherever color-correction results in better scores. |         |           |       |        |         |       |        |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|-----------|-------|--------|---------|-------|--------|
 |                                                                                                                                                              |         |           |       |        |         |       |        |
@@ -103,7 +103,7 @@ python yolov5/detect.py --weights yolov5/runs/train/exp3/weights/best.pt --conf_
 | vein                                                                                                                                                         | 0.031   | 0.739     | 0.747 | 0.773  | 0.816   | 0.797 | 0.761  |
 | F1-score                                                                                                                                                     |         | 0.571     | 0.553 | 0.559  | 0.649   | 0.638 | 0.638  |
 
-```
+
 
 ## False Positive Results 
 ```
